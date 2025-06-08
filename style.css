@@ -1,0 +1,131 @@
+/* Header styles for Intel branding */
+.intel-header {
+  /* Intel blue background */
+  background-color: #0071c5; /* Intel's primary blue */
+  color: white; /* White text for contrast */
+  padding: 40px 0; /* Space above and below */
+  text-align: center; /* Center all content */
+}
+
+
+/* Container for header content */
+.header-content {
+  max-width: 600px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the container */
+}
+
+
+/* Intel logo styling */
+.intel-logo {
+  width: 120px; /* Set logo size */
+  margin-bottom: 20px; /* Space below logo */
+}
+
+
+/* Main heading style */
+.main-heading {
+  font-family: Arial, Helvetica, sans-serif; /* Clean font */
+  font-size: 2.5em; /* Large headline */
+  margin: 10px 0; /* Space above and below */
+  font-weight: bold;
+}
+
+
+/* Subheading style */
+.subheading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  margin-top: 10px;
+  margin-bottom: 0;
+  opacity: 0.95; /* Slight transparency for softer look */
+}
+
+
+/* ...existing code... */
+
+
+/* Timeline container styles */
+.timeline-container {
+  display: flex; /* Arrange cards in a row */
+  overflow-x: auto; /* Enable horizontal scroll if needed */
+  gap: 16px; /* Space between cards */
+  padding: 16px 0; /* Space above and below */
+}
+
+
+/* Each timeline card */
+.timeline-card {
+  background: #f5f5f5; /* Light background for cards */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 16px;
+  min-width: 250px; /* Minimum width for each card */
+  max-width: 300px; /* Maximum width for each card */
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+  text-align: center;
+}
+
+
+/* Make images fit nicely in cards */
+.timeline-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+
+/* Responsive: Stack cards vertically on small screens */
+@media (max-width: 700px) {
+  .timeline-container {
+    flex-direction: column; /* Stack cards vertically */
+    overflow-x: visible; /* No horizontal scroll */
+    gap: 24px; /* More space between cards */
+  }
+  .timeline-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+
+/* ...existing code... */
+
+
+/* Hide the text under the image by default */
+.timeline-img-text {
+  display: none;
+}
+
+
+/* Show the text only when hovering over the image */
+.timeline-img-container:hover .timeline-img-text {
+  display: block;
+  margin-top: 10px;
+  background: #e6f0fa; /* Light blue background for visibility */
+  padding: 8px;
+  border-radius: 4px;
+}
+/* RTL support */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] .main-heading,
+[dir="rtl"] .subheading,
+[dir="rtl"] .timeline-card {
+  text-align: right;
+}
+
+[dir="rtl"] .timeline-container {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .timeline-card img {
+  /* If you want to flip images for RTL, use: */
+  /* transform: scaleX(-1); */
+}
+
+.subscription-form-bg {
+  background-color: #e6f0fa !important; /* Light blue */
+}
